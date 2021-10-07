@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="themathshelfproject.github.io/site/feed.xml" rel="self" type="application/atom+xml" /><link href="themathshelfproject.github.io/site/" rel="alternate" type="text/html" /><updated>2021-10-06T23:35:08-07:00</updated><id>themathshelfproject.github.io/site/feed.xml</id><entry><title type="html">I.3 Proposition 3.3</title><link href="themathshelfproject.github.io/site/blog/2021/10/05/Amann-Escher-I-3-Proposition-3-3/" rel="alternate" type="text/html" title="I.3 Proposition 3.3" /><published>2021-10-05T00:00:00-07:00</published><updated>2021-10-05T00:00:00-07:00</updated><id>themathshelfproject.github.io/site/blog/2021/10/05/Amann-Escher-I-3-Proposition-3-3</id><content type="html" xml:base="themathshelfproject.github.io/site/blog/2021/10/05/Amann-Escher-I-3-Proposition-3-3/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;Let $f: X \to Y$, $g: Y \to U$, and $h: U \to V$  be functions. Then, the 
+compositions $(h \circ g) \circ f$ and $h \circ (g \circ f): X \to V$ are 
+well-defined and $(h \circ g) \circ f = h \circ (g \circ f)$ (associativity 
+of composition).&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Lemma I&lt;/em&gt;: $(h \circ g) \circ f$ is well-defined map from $X$ to $V$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;Since $g: Y \to U$ and $h: U \to V$, $h \circ g: Y \to V$ by definition of composition.
+Further, since $f: X \to Y$, we have $(h \circ g) \circ f: X \to V$ by the same definition.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Lemma II&lt;/em&gt;: $h \circ (g \circ f)$ is well-defined map from $X$ to $V$&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Proof&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;Since $f: X \to Y$ and $g: Y \to U$, $g \circ f: X \to U$ by definition of composition.
+Further, since $h: U \to V$, we have $h \circ (g \circ f): X \to V$ by the same definition.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We now show that composition is associative, i.e. that $(h \circ g) \circ f = h \circ (g \circ f)$. 
+Recall that in order to show that two functions are equal, we must show that they have the same domain, codomain, and “rule”.
+By the previous lemmas, we know that both $(h \circ g) \circ f$ and $h \circ (g \circ f)$ have the same domain ($X$) and codomain ($V$), so all that remains is the rule.&lt;/p&gt;
+
+&lt;p&gt;For this, let $x$ be an arbitrary element of $X$. Then,&lt;/p&gt;
+
+&lt;div class=&quot;kdmath&quot;&gt;$$
+\begin{alignat}{2}
+    ((h \circ g) \circ f)(x) &amp;= (h \circ g)(f(x)) &amp;&amp;\text{ (by defn. of composition)} \\
+    &amp;= h(g(f(x))) &amp;&amp;\text{ (by defn. of composition)} \\
+    &amp;= h((g \circ f(x)) &amp;&amp;\text{ (by defn. of composition)} \\
+    &amp;= (h(g \circ f))(x) &amp;&amp;\text{ (by defn. of composition)}
+\end{alignat}
+$$&lt;/div&gt;
+
+&lt;p&gt;Thus, the rule is also the same and the two functions are equal.&lt;/p&gt;</content><author><name></name></author><summary type="html">Problem</summary></entry><entry><title type="html">How does it work?</title><link href="themathshelfproject.github.io/site/blog/2021/10/03/how_does_it_work/" rel="alternate" type="text/html" title="How does it work?" /><published>2021-10-03T00:00:00-07:00</published><updated>2021-10-03T00:00:00-07:00</updated><id>themathshelfproject.github.io/site/blog/2021/10/03/how_does_it_work</id><content type="html" xml:base="themathshelfproject.github.io/site/blog/2021/10/03/how_does_it_work/">&lt;p&gt;As mentioned &lt;a href=&quot;/blog/2021/10/02/what_is_this/&quot;&gt;here&lt;/a&gt;, The Math Shelf Project is about “reading” math books by solving all the exercises. To keep myself accountable, here are some ground rules I’ll be following.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;All solutions will be graded by someone with graduate training in mathematics&lt;/li&gt;
+  &lt;li&gt;The above grader will only mark solutions as right or wrong
+    &lt;ul&gt;
+      &lt;li&gt;Therefore, if I get a problem wrong, I will have to “debug” and fix it myself.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;All solutions will be posted &lt;a href=&quot;/blog/2021/10/03/whats_the_current_status&quot;&gt;here&lt;/a&gt; as a learning resource (and for anyone to critique).&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">As mentioned here, The Math Shelf Project is about “reading” math books by solving all the exercises. To keep myself accountable, here are some ground rules I’ll be following.</summary></entry><entry><title type="html">What’s the current status?</title><link href="themathshelfproject.github.io/site/blog/2021/10/03/whats_the_current_status/" rel="alternate" type="text/html" title="What’s the current status?" /><published>2021-10-03T00:00:00-07:00</published><updated>2021-10-03T00:00:00-07:00</updated><id>themathshelfproject.github.io/site/blog/2021/10/03/whats_the_current_status</id><content type="html" xml:base="themathshelfproject.github.io/site/blog/2021/10/03/whats_the_current_status/">&lt;h3 id=&quot;analysis-i-amann-escher&quot;&gt;&lt;a href=&quot;https://www.amazon.com/Analysis-I-Herbert-Amann/dp/3764371536&quot;&gt;Analysis I (Amann-Escher)&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Section I.1: Fundamentals of Logic
+    &lt;ul&gt;
+      &lt;li&gt;Exercise 1&lt;/li&gt;
+      &lt;li&gt;Exercise 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Section I.3: Functions
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/blog/2021/10/05/Amann-Escher-I-3-Proposition-3-3&quot;&gt;Proposition 3.3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Analysis I (Amann-Escher)</summary></entry><entry><title type="html">What is this?</title><link href="themathshelfproject.github.io/site/blog/2021/10/02/what_is_this/" rel="alternate" type="text/html" title="What is this?" /><published>2021-10-02T00:00:00-07:00</published><updated>2021-10-02T00:00:00-07:00</updated><id>themathshelfproject.github.io/site/blog/2021/10/02/what_is_this</id><content type="html" xml:base="themathshelfproject.github.io/site/blog/2021/10/02/what_is_this/">&lt;p&gt;As a kid, I always had a thing for books. Physical books that is, not the stuff from &lt;a href=&quot;https://libgen.is/&quot;&gt;libgen&lt;/a&gt; we cram our hard drives with these days. I loved running my hands over hardcovers, emulating the classic &lt;a href=&quot;https://bookriot.com/rory-gilmore-reading-list/&quot;&gt;Rory Gilmore pose&lt;/a&gt; with paperbacks, and pretty much doing everything with books &lt;em&gt;other than actually reading them&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I know - weird.&lt;/p&gt;
+
+&lt;p&gt;My parents assumed I’d outgrow it, but I didn’t. Instead, I became a tween hoarder, building my own &lt;a href=&quot;/assets/library-of-alexandria.jpg&quot;&gt;Library of Alexandria&lt;/a&gt; with whatever print material I could possibly get my hands on. This mania continued until the 10th grade, when, for some unknown-to-this-day reason, I started focusing my collection on math texts.&lt;/p&gt;
+
+&lt;p&gt;I wasn’t particularly good at math, and there was no way in hell I could be convinced to sit down and &lt;em&gt;actually read&lt;/em&gt; books on the subject, but I was still obsessed with them. However, due to cabal that is mathematics publishing, they were way outside my price range.&lt;/p&gt;
+
+&lt;p&gt;Enter Amazon - and the strangest hobby of all time.&lt;/p&gt;
+
+&lt;p&gt;In my final two years of high school, I clocked well over $500$ hours reading &lt;em&gt;reviews&lt;/em&gt; of math books I wanted to buy on &lt;a href=&quot;https://www.amazon.com/&quot;&gt;amazon.com&lt;/a&gt;. I knew that &lt;a href=&quot;https://www.amazon.com/Principles-Mathematical-Analysis-International-Mathematics/dp/007054235X&quot;&gt;Baby Rudin&lt;/a&gt;, &lt;a href=&quot;https://www.amazon.com/Topology-2nd-James-Munkres/dp/0131816292/&quot;&gt;Munkres&lt;/a&gt;, and &lt;a href=&quot;https://www.amazon.com/Abstract-Algebra-3rd-David-Dummit/dp/0471433349&quot;&gt;Dummit &amp;amp; Foote&lt;/a&gt; could be digitally had in a few clicks, but I had no intention of actually assessing these texts. Rather, I spent hours every day &lt;em&gt;imagining&lt;/em&gt; what it would feel like to have read these tomes cover to cover.&lt;/p&gt;
+
+&lt;p&gt;I know, I know - this is pathological.&lt;/p&gt;
+
+&lt;p&gt;Fortunately however, my parents, who had grown increasingly suspicious of my screen time, were convinced that I was either running the &lt;a href=&quot;https://en.wikipedia.org/wiki/Silk_Road_(marketplace)&quot;&gt;Silk Road&lt;/a&gt; from my bedroom or threatening national security. Both would have been problematic for their reputation, so I was shipped off to India the summer before college to spend time with my luddite grandparents. I didn’t see it as such back then, but in retrospect, it was a blessing in disguise.&lt;/p&gt;
+
+&lt;p&gt;In college, I studied computer science along with a touch of mathematics: multivariable calculus, linear algebra, discrete math, and elementary number theory (i.e. the standard fare). Ironic? Absolutely. But nothing life-changing - or at least not enough to get me to start a math blog. Besides the jarring experience of having to &lt;em&gt;prove&lt;/em&gt; things rather than just plug and chug, these courses were pretty meh.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, there was one benefit; the sheer workload of a CS degree and constantly walking across a $1200$ acre campus kept me &lt;em&gt;far&lt;/em&gt; too busy to explore the Amazon math catalog.&lt;/p&gt;
+
+&lt;p&gt;Then it happened.&lt;/p&gt;
+
+&lt;p&gt;Immigrant Indian parents have a strange fetish for &lt;a href=&quot;https://ap.collegeboard.org/&quot;&gt;AP&lt;/a&gt; classes, so I had lots of general education credits by the time I got to campus. As a result, I had a light schedule - perhaps &lt;em&gt;too&lt;/em&gt; light - planned for the spring semester of my senior year. Further, I had heard that graph theory was useful for programming interviews (total catfish by the way), so I decided to sign up for &lt;a href=&quot;https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/408-math-475-combinatorics-and-graph-theory.html&quot;&gt;CMSC 475&lt;/a&gt; with &lt;a href=&quot;https://www.linkedin.com/in/roohollah-ebrahimian-060b3265&quot;&gt;this man&lt;/a&gt;, who happened to have good &lt;a href=&quot;https://www.ratemyprofessors.com/ShowRatings.jsp?tid=1978290&quot;&gt;reviews&lt;/a&gt;. However, what I had failed to discover was that he was a former &lt;a href=&quot;http://www.imo-official.org/&quot;&gt;IMO&lt;/a&gt; &lt;a href=&quot;http://www.imo-official.org/participant_r.aspx?id=4257&quot;&gt;silver medalist&lt;/a&gt; with a penchant for contest-style combinatorics problems.&lt;/p&gt;
+
+&lt;p&gt;Fuck.&lt;/p&gt;
+
+&lt;p&gt;True to his credentials, Dr. Ebrahimian gave out hard - no, brutal - problem sets. However, to my utter surprise, I actually &lt;em&gt;enjoyed&lt;/em&gt; doing them, so much so that I started looking forward to the homework. For the first time in my life, I liked &lt;em&gt;actually doing&lt;/em&gt; math a lot more than &lt;em&gt;imagining&lt;/em&gt; myself having mastered it. The process of playing around with a problem, hitting a wall, putting the pieces together - it was all inexplicably addictive.&lt;/p&gt;
+
+&lt;p&gt;However, just as I was getting to used to the idyllic math lifestyle, I graduated - and was promptly thrust into the big, bad world. My parents had invested many zeroes into my education, and I had always embodied the debt repayment policy of the &lt;a href=&quot;https://www.youtube.com/watch?v=jERdloSRJEw&quot;&gt;Lannisters&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These days, I’m a software engineer with a comfortable job and an empty bookshelf. For better or worse (but probably worse), I’d like to build the math collection of my teenage dreams. However, this time, I’m going to do it right; a textbook only goes on the shelf once I’ve solved &lt;em&gt;every single problem in it&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Will I fill the shelf? Maybe, maybe not. But at least I’ll enjoy the journey.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Welcome to The Math Shelf Project.&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">As a kid, I always had a thing for books. Physical books that is, not the stuff from libgen we cram our hard drives with these days. I loved running my hands over hardcovers, emulating the classic Rory Gilmore pose with paperbacks, and pretty much doing everything with books other than actually reading them.</summary></entry></feed>
