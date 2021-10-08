@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>I.3 Exercise 3</title>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+
+    <meta name='description' content='Building the math shelf of my teenage dreams'>
+    <meta name='keywords' content=''>
+    <meta name='author' content='John Doe'>
+
+    <link href='/site/css/blog.css' rel='stylesheet'/>
+    <link href='/site/css/trac.css' rel='stylesheet'/>
+    <link href='/site/css/markdown.css' rel='stylesheet'/>
+
+    <link rel='shortcut icon' href='/site/assets/favicon.ico' />
+    <script type='text/x-mathjax-config'>
+MathJax.Hub.Config({
+  jax: ['input/TeX', 'output/HTML-CSS'],
+  tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'], ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+    extensions: ['color.js']
+  },
+  messageStyle: 'none',
+  'HTML-CSS': { preferredFont: 'TeX', availableFonts: ['STIX','TeX'] }
+});
+MathJax.Message.Log()
+</script>
+
+<script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML' type='text/javascript'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+<body>
+<div class='content'>
+    <div class='nav'>
+    <ul class='wrap'>
+        <li><a href='/site/'>Home</a></li>
+        <li><a href='/site/blog'>Blog</a></li>
+    </ul>
+</div>
+    <div class='front-matter'>
+        <div class='wrap'>
+            <h1>I.3 Exercise 3</h1>
+            <h4></h4>
+            <div class='bylines'>
+                <div class='byline'>
+                    <h3>Published</h3>
+                    <p>07 October 2021</p>
+                </div>
+            </div>
+            <div class='clear'></div>
+        </div>
+    </div>
+    <div class='wrap article'>
+        <h2 id="problem">Problem</h2>
+
+<p>Let $f: X \to Y$, $g: Y \to Z$ be functions. Show the following</p>
+
+<p>(i) If $f, g$ are injective (surjective), so is $g \circ f$</p>
+
+<p>(ii) $f$ is injective $\iff$ $\exists h: Y \to X$ such that $h \circ f = id_X$</p>
+
+<p>(iii) $f$ is surjective $\iff$ $\exists h: Y \to X$ such that $f \circ h = id_Y$</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>(i) We will first show that if $f, g$ are injective, so is $g \circ f$. By the definition
+of composition, we know that $g \circ f: X \to Z$ is a well-defined map. Now, let $x_1, x_2$ 
+be arbitrary elements of $X$ such that $(g \circ f)(x_1) = (g \circ f)(x_2)$. Then,</p>
+
+<div class="kdmath">$$
+\begin{alignat}{2}
+    (g \circ f)(x_1) = (g \circ f)(x_2) &\implies g(f(x_1)) = g(f(x_2)) &&\text{ (by defn. of composition)} \\
+    &\implies f(x_1) = f(x_2) &&\text{ (since $g$ is injective)} \\
+    &\implies x_1 = x_2 &&\text{ (since $f$ is injective)}
+\end{alignat}
+$$</div>
+
+<p>This completes the proof.</p>
+
+<p>We will now show that if $f, g$ are surjective, so is $g \circ f$. For this, let $z$ be an
+arbitrary element of $Z$. Given that $f, g$ are surjective, $f(X) = Y$ and $g(Y) = Z$. 
+Hence, by the definition of a function image, there exists a $y \in Y$ such that $g(y) = z$
+and an $x \in X$ such that $f(x) = y$. Now, by the definition of composition,</p>
+
+<div class="kdmath">$$
+(g \circ f)(x) = g(f(x)) = g(y) = z
+$$</div>
+
+<p>Since $z$ is an arbitrary element of $Z$, this implies, without loss of generality, that for
+<em>any</em> $z \in Z$ there exists $x \in X$ such that $(g \circ f)(x) = z$. In other words, 
+$(g \circ f)(X) = Z$. This completes the proof.</p>
+
+<p><br /></p>
+
+<p>(ii) We will first prove, constructively, that $f$ is injective $\implies$ $\exists h: Y \to X$ such that $h \circ f = id_X$. 
+Let $h: Y \to X$ be given by the rule below. Note that since $f$ may not necessarily be surjective, $h$ could be 
+ill-defined if we only specified mappings for $y \in f(X)$.</p>
+
+<div class="kdmath">$$
+\begin{cases} 
+      y \mapsto x \text{ such that } f(x) = y & \text{ if } y \in f(X) \\
+      y \mapsto y & \text{ if } y \in Y - f(X)
+   \end{cases}
+$$</div>
+
+<p>Now, by the definition of composition, we know that $h \circ f: X \to X$ is a well-defined map. 
+Further, $\forall x \in X$ we have, by function composition and the mapping rule for $h$,</p>
+
+<div class="kdmath">$$
+(h \circ f)(x) = h(f(x)) = x
+$$</div>
+
+<p>Thus, $h \circ f = id_X$. This completes the proof of the forward case.</p>
+
+<p>We will now show that if there exists $h: Y \to X$ such that $h \circ f = id_X$, $f$ is injective.
+Let $x_1, x_2$ be arbitrary elements of $X$ such that $f(x_1) = f(x_2)$. Then, we have</p>
+
+<div class="kdmath">$$
+\begin{alignat}{2}
+    (h \circ f)(x_1) &= h(f(x_1)) &&\text{ (by defn. of composition)} \\
+    &= x_1 &&\text{ (since $h \circ f = id_X$)} \\
+    &= h(f(x_2)) &&\text{ (since $f(x_1) = f(x_2)$)} \\
+    &= x_2 &&\text{ (since $h \circ f = id_X$)} \\
+\end{alignat}
+$$</div>
+
+<p>Thus, $x_1 = x_2$ and $f$ is injective. This completes the reverse case and the proof.</p>
+
+    </div>
+</div>
+</body>
+</html>
