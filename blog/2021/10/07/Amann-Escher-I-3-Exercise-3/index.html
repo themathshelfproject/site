@@ -80,18 +80,17 @@ $$</div>
 
 <p>This completes the proof.</p>
 
-<p>We will now show that if $f, g$ are surjective, so is $g \circ f$. For this, let $z$ be an
-arbitrary element of $Z$. Given that $f, g$ are surjective, $f(X) = Y$ and $g(Y) = Z$. 
-Hence, by the definition of a function image, there exists a $y \in Y$ such that $g(y) = z$
-and an $x \in X$ such that $f(x) = y$. Now, by the definition of composition,</p>
+<p>We will now show that if $f, g$ are surjective, so is $g \circ f$.</p>
 
 <div class="kdmath">$$
-(g \circ f)(x) = g(f(x)) = g(y) = z
+\begin{alignat}{2}
+    (g \circ f)(X) &= g(f(X)) &&\text{ (by defn. of composition)} \\
+    &= g(Y) &&\text{ (since $f(X) = Y$ by surjectivity of $f$)} \\
+    &= Z &&\text{ (since $g(Y) = Z$ by surjectivity of $g$)} \\
+\end{alignat}
 $$</div>
 
-<p>Since $z$ is an arbitrary element of $Z$, this implies, without loss of generality, that for
-<em>any</em> $z \in Z$ there exists $x \in X$ such that $(g \circ f)(x) = z$. In other words, 
-$(g \circ f)(X) = Z$. This completes the proof.</p>
+<p>This completes the proof.</p>
 
 <p><br /></p>
 
@@ -121,8 +120,8 @@ Let $x_1, x_2$ be arbitrary elements of $X$ such that $f(x_1) = f(x_2)$. Then, w
 <div class="kdmath">$$
 \begin{alignat}{2}
     (h \circ f)(x_1) &= h(f(x_1)) &&\text{ (by defn. of composition)} \\
-    &= x_1 &&\text{ (since $h \circ f = id_X$)} \\
     &= h(f(x_2)) &&\text{ (since $f(x_1) = f(x_2)$)} \\
+    &= x_1 &&\text{ (since $h \circ f = id_X$)} \\
     &= x_2 &&\text{ (since $h \circ f = id_X$)} \\
 \end{alignat}
 $$</div>
