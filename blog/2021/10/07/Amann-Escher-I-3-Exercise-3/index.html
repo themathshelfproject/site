@@ -92,7 +92,8 @@ $$</div>
 
 <p>This completes the proof.</p>
 
-<p><br /></p>
+<p><br />
+<br /></p>
 
 <p>(ii) We will first prove, constructively, that $f$ is injective $\implies$ $\exists h: Y \to X$ such that $h \circ f = id_X$. 
 Let $h: Y \to X$ be given by the rule below. Note that since $f$ may not necessarily be surjective, $h$ could be 
@@ -127,6 +128,51 @@ Let $x_1, x_2$ be arbitrary elements of $X$ such that $f(x_1) = f(x_2)$. Then, w
 $$</div>
 
 <p>Thus, $x_1 = x_2$ and $f$ is injective. This completes the reverse case and the proof.</p>
+
+<p><br />
+<br /></p>
+
+<p>(iii) We will prove, constructively, that $f$ is surjective $\implies$ $\exists h: Y \to X$ such that 
+$f \circ h = id_Y$. Let $h: Y \to X$ be given by the rule below. Note that since $f$ may not 
+necessarily be injective, $h$ could be ill-defined if we did not specify a separate rule for 
+when multiple $x \in X$ map to a given $y \in Y$.</p>
+
+<div class="kdmath">$$
+\begin{cases} 
+      y \mapsto x_i & \text{ if } x_i, \ldots, x_j \in X\ (i \ne j) \text{ such that } f(x) = y \\
+      y \mapsto x & \text{ if } \exists!\ x \in X \text{ such that } f(x) = y
+   \end{cases}
+$$</div>
+
+<p>Now, by definition of composition, we know $f \circ h: Y \to Y$ is well-defined. Also, since $f$
+is surjective $f(X) = Y$. That is, $\forall y \in Y$ there exists at least one $x_i \in X$ such that $f(x_i) = y$. 
+By the previous two facts and the definition of composition, $\forall y \in Y$ we have</p>
+
+<div class="kdmath">$$
+(f \circ h)(y) = f(h(y)) = f(x_i) = y
+$$</div>
+
+<p>Hence, $f \circ h = id_Y$. This completes the proof of the forward case.</p>
+
+<p>We will now show that if there exists $h: Y \to X$ such that $f \circ h = id_Y$,
+$f$ is surjective. Note that since $id_Y$ maps $y \mapsto y$ for every $y \in Y$,
+we have $id_Y(Y) = Y$. Then, by the definition of composition</p>
+
+<div class="kdmath">$$
+Y = id_Y(Y) = (f \circ h)(Y) = f(h(Y))
+$$</div>
+
+<p>Here, observe that by the definition of a function image, $h(Y) \subseteq X$ and $f(X) \subseteq Y$.
+This gives us the necessary conditions to invoke <a href="/site/blog/2021/10/07/Amann-Escher-I-3-Exercise-2/">I.3 Exercise 2 (i)</a>.
+By that exercise, we have</p>
+
+<div class="kdmath">$$
+Y = f(h(Y)) \subseteq f(X)
+$$</div>
+
+<p>which, in addition to $f(X) \subseteq Y$, tells us that $f(X) = Y$. In other words, $f$ is surjective.</p>
+
+<p>This completes the reverse case and the proof.</p>
 
     </div>
 </div>

@@ -84,10 +84,10 @@ $$</div>
 
 <div class="kdmath">$$
 \begin{alignat}{2}
-y \in f\left(\bigcup_i A_i\right) &\implies x \in \bigcup_i A_i &&\text{ (by defn. of a function image)} \\
-&\implies \exists j \in I \text{ such that } x \in A_j &&\text{ (by defn. of set union)} \\
-&\implies y \in f(A_j) &&\text{ (by defn. of a function image)} \\
-&\implies y \in \bigcup_i f(A_i) &&\text{ (by defn. of set union)} \\
+y \in f\left(\bigcup_i A_i\right) &\implies x \in \bigcup_i A_i \text{ such that } f(x) = y &&\text{ (by defn. of a function image)} \\
+&\implies \exists j \in I \text{ such that } x \in A_j &&\text{ (since $A_j \subseteq \bigcup_i A_i$)} \\
+&\implies y \in f(A_j) &&\text{ (since $f(x) = y$)} \\
+&\implies y \in \bigcup_i f(A_i) &&\text{ (since $f(A_j) \subseteq \bigcup_i f(A_i)$)} \\
 \end{alignat}
 $$</div>
 
@@ -97,16 +97,16 @@ $$</div>
 
 <div class="kdmath">$$
 \begin{alignat}{2}
-y \in \bigcup_i f(A_i) &\implies \exists j \in I \text{ such that } y \in f(A_j) &&\text{ (by defn. of set union)} \\
+y \in \bigcup_i f(A_i) &\implies \exists j \in I \text{ such that } y \in f(A_j) &&\text{ (since $f(A_j) \subseteq \bigcup_i f(A_i)$)} \\
 &\implies \exists x \in A_j \text{ such that } f(x) = y &&\text{ (by defn. of a function image)} \\
-&\implies x \in \bigcup_i A_i &&\text{ (by defn. of set union)} \\
-&\implies y \in f\left(\bigcup_i A_i \right) &&\text{ (by defn. of a function image)} \\
+&\implies x \in \bigcup_i A_i &&\text{ (since $A_j \subseteq \bigcup_i A_i$)} \\
+&\implies y \in f\left(\bigcup_i A_i \right) &&\text{ (since $f(x) = y$)} \\
 \end{alignat}
 $$</div>
 
 <p>Thus, $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$.</p>
 
-<p>This, in conjunction with $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$ completes the proof.</p>
+<p>This, in conjunction with the forward case completes the proof.</p>
 
     </div>
 </div>
