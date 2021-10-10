@@ -78,35 +78,34 @@ $$</div>
 
 <p>Thus, $f(A) \subseteq f(B)$.</p>
 
-<p><br /></p>
+<p><br />
+<br /></p>
 
 <p>(ii) We first show that $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$. For this, let $y \in f\left(\bigcup_i A_i\right)$</p>
 
 <div class="kdmath">$$
 \begin{alignat}{2}
-y \in f\left(\bigcup_i A_i\right) &\implies x \in \bigcup_i A_i \text{ such that } f(x) = y &&\text{ (by defn. of a function image)} \\
-&\implies \exists j \in I \text{ such that } x \in A_j &&\text{ (since $A_j \subseteq \bigcup_i A_i$)} \\
-&\implies y \in f(A_j) &&\text{ (since $f(x) = y$)} \\
-&\implies y \in \bigcup_i f(A_i) &&\text{ (since $f(A_j) \subseteq \bigcup_i f(A_i)$)} \\
+    y \in f\left(\bigcup_i A_i\right) &\implies x \in \bigcup_i A_i \text{ such that } f(x) = y &&\text{ (by defn. of a function image)} \\
+    &\implies \exists j \in I \text{ such that } x \in A_j &&\text{ (by defn. of set union)} \\
+    &\implies y \in f(A_j) &&\text{ (since $f(x) = y$)} \\
+    &\implies y \in \bigcup_i f(A_i) &&\text{ (since $f(A_j) \subseteq \bigcup_i f(A_i)$)} \\
 \end{alignat}
 $$</div>
 
-<p>Thus, $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$.</p>
+<p>Thus, $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$. This completes the forward case.</p>
 
-<p>We now show the reverse, i.e. that $\bigcup_i f(A_i) \subseteq f\left(\bigcup_i A_i\right)$. For this, let $y \in \bigcup_i f(A_i)$.</p>
+<p>We now show the reverse, i.e. that $\bigcup_i f(A_i) \subseteq f\left(\bigcup_i A_i\right)$. First,
+recall that for every $i \in I$, $A_i \subseteq \bigcup_i A_i$. Hence, by part (i), we know that
+$f(A_i) \subseteq f\left(\bigcup_i A_i\right)$. Then,</p>
 
 <div class="kdmath">$$
 \begin{alignat}{2}
-y \in \bigcup_i f(A_i) &\implies \exists j \in I \text{ such that } y \in f(A_j) &&\text{ (since $f(A_j) \subseteq \bigcup_i f(A_i)$)} \\
-&\implies \exists x \in A_j \text{ such that } f(x) = y &&\text{ (by defn. of a function image)} \\
-&\implies x \in \bigcup_i A_i &&\text{ (since $A_j \subseteq \bigcup_i A_i$)} \\
-&\implies y \in f\left(\bigcup_i A_i \right) &&\text{ (since $f(x) = y$)} \\
+    y \in \bigcup_i f(A_i) &\implies \exists j \in I \text{ such that } y \in f(A_j) &&\text{ (by defn. of set union)} \\
+    &\implies y \in f\left(\bigcup_i A_i\right) &&\text{ (since $f(A_i) \subseteq f\left(\bigcup_i A_i\right)$)} \\
 \end{alignat}
 $$</div>
 
-<p>Thus, $f\left(\bigcup_i A_i\right) \subseteq \bigcup_i f(A_i)$.</p>
-
-<p>This, in conjunction with the forward case completes the proof.</p>
+<p>Thus, $\bigcup_i f(A_i) \subseteq f\left(\bigcup_i A_i\right)$. This completes the reverse case and the proof.</p>
 
     </div>
 </div>
