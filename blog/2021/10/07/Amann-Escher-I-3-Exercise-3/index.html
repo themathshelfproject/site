@@ -102,7 +102,7 @@ ill-defined if we only specified mappings for $y \in f(X)$.</p>
 <div class="kdmath">$$
 \begin{cases} 
       y \mapsto x \text{ such that } f(x) = y & \text{ if } y \in f(X) \\
-      y \mapsto y & \text{ if } y \in Y - f(X)
+      y \mapsto \text{some arbitrary } x \in X & \text{ if } y \in Y - f(X)
    \end{cases}
 $$</div>
 
@@ -139,10 +139,14 @@ when multiple $x \in X$ map to a given $y \in Y$.</p>
 
 <div class="kdmath">$$
 \begin{cases} 
-      y \mapsto x_i & \text{ if } x_i, \ldots, x_j \in X\ (i \ne j) \text{ such that } f(x) = y \\
-      y \mapsto x & \text{ if } \exists!\ x \in X \text{ such that } f(x) = y
-   \end{cases}
+      y \mapsto x & \text{ if } \exists!\ x \in X \text{ such that } f(x) = y \\
+      y \mapsto \text{ some arbitrary } x \in f^{-1}(y) & \text{ if } |f^{-1}(y)| > 1
+\end{cases}
 $$</div>
+
+<p><strong>Side note</strong>: $f^{-1}(y)$ refers to the preimage or fiber of $f$ at $y$ 
+(i.e. $\{x \in X, f(x) = y\}$) NOT the inverse of $f$. It is not meaningful to talk about the inverse of $f$ 
+unless $f$ is both injective <em>and</em> surjective, which, as stated before, may not be the case here.</p>
 
 <p>Now, by definition of composition, we know $f \circ h: Y \to Y$ is well-defined. Also, since $f$
 is surjective $f(X) = Y$. That is, $\forall y \in Y$ there exists at least one $x_i \in X$ such that $f(x_i) = y$. 
